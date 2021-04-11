@@ -1,25 +1,25 @@
-import { useEffect, useState } from 'react';
-import { Route, Switch } from 'react-router';
-import './App.css';
-import Login from './components/auth/Login';
-import Home from './components/home/Home';
-import Navbar from './components/nav/Navbar';
-import { getUserInfo } from './services/UserService'
-import { getAccessToken } from './store/AccessTokenStore';
+import { useEffect, useState } from "react";
+import { Route, Switch } from "react-router";
+import "./App.css";
+import Login from "./components/auth/Login";
+import Home from "./components/home/Home";
+import Navbar from "./components/nav/Navbar";
+import Product from "./components/product/Product";
+import { getUserInfo } from "./services/UserService";
+import { getAccessToken } from "./store/AccessTokenStore";
 
 function App() {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState(null);
 
   const getUser = () => {
-    return getUserInfo()
-      .then(response => setUser(response))
-  }
+    return getUserInfo().then((response) => setUser(response));
+  };
 
   useEffect(() => {
     if (getAccessToken()) {
-      getUser()
+      getUser();
     }
-  }, [])
+  }, []);
 
   return (
     <div className="App">
@@ -27,7 +27,16 @@ function App() {
 
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/signin" render={() => <Login doLogin={getUser} />} />
+        <Route
+          exact
+          path="/product/:id"
+          render={() => <Product user={user} />}
+        />
+        <Route
+          exact
+          path="/signin"
+          render={() => <Login doLogin={getUser} />}
+        />
       </Switch>
     </div>
   );
