@@ -3,6 +3,7 @@ import { useHistory } from 'react-router';
 import { login } from '../../services/AuthService';
 import { setAccessToken } from '../../store/AccessTokenStore';
 
+// eslint-disable-next-line no-useless-escape
 const EMAIL_PATTERN = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
 const validators = {

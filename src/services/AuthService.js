@@ -1,7 +1,8 @@
 import { create } from "./BaseService";
 
 const http = create({
-  useAccessToken: false
+  useAccessToken: false,
+  reloadOnUnauthorized: false,
 })
 
 export const login = (body) => {
