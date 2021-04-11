@@ -7,13 +7,15 @@ export const getProducts = (category, search) => {
 };
 
 export const getProduct = (id) => {
-	return http.get(`/products/${id}`);
-}
+  return http.get(`/products/${id}`);
+};
 
 export const editProduct = (product, id) => {
-	return http.put(`/products/${id}`, product);
-}
+  return http.put(`/products/${id}`, product, {
+    headers: { "Content-type": "multipart/form-data" },
+  });
+};
 
 export const createProduct = (product) => {
-	return http.post(`/products`, product);
-}
+  return http.post(`/products`, product);
+};

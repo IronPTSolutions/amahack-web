@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
 import { getProduct } from "../../services/ProductsService";
 
-const ProductDetail = ({ user }) => {
+const ProductDetail = () => {
+  const { user } = useContext(AuthContext);
   const { id } = useParams();
   const [product, setProduct] = useState();
 
