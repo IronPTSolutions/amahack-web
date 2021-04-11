@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CATEGORIES = ['Electronics', 'Computers', 'Home', 'Pets', 'Fashion']
+export const CATEGORIES = ['Electronics', 'Computers', 'Home', 'Pets', 'Fashion']
 
 const MenuButton = ({category, setCategory, active}) => (
   <li className="nav-item">

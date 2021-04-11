@@ -1,32 +1,39 @@
-import axios from 'axios'
-import { getAccessToken, logout } from '../store/AccessTokenStore'
+import axios from "axios";
+import { getAccessToken, logout } from "../store/AccessTokenStore";
 
 export const create = (opts = {}) => {
   const http = axios.create({
-    baseURL: 'http://localhost:3001/api',
-    ...opts
-  })
+    baseURL: "http://localhost:3001/api",
+    ...opts,
+  });
 
-  http.interceptors.request.use(request => {
+  http.interceptors.request.use((request) => {
     if (opts.useAccessToken !== false) {
-      request.headers.common.Authorization = `Bearer ${getAccessToken()}`
+      request.headers.common.Authorization = `Bearer ${getAccessToken()}`;
     } else {
-      delete request.headers.common.Authorization
+      delete request.headers.common.Authorization;
     }
 
-    return request
-  })
+    return request;
+  });
 
   http.interceptors.response.use(
-    response => response.data,
-    error => {
-      if (error.response && [401, 403].includes(error.response.status)) {
-        logout()
+    (response) => response.data,
+    (error) => {
+      if (
+        opts.logoutOnUnauthorized &&
+        error.response &&
+        401 === error.response.status
+      ) {
+        logout();
+        return;
+      } else if (error.response.status === 403) {
+        window.location.assign("/");
       }
 
-      return Promise.reject(error)
+      return Promise.reject(error);
     }
-  )
+  );
 
-  return http
-}
+  return http;
+};
