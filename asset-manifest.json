@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/amahack-web/static/css/main.8bcbd900.chunk.css",
-    "main.js": "/amahack-web/static/js/main.361b7adf.chunk.js",
-    "main.js.map": "/amahack-web/static/js/main.361b7adf.chunk.js.map",
+    "main.js": "/amahack-web/static/js/main.c9285619.chunk.js",
+    "main.js.map": "/amahack-web/static/js/main.c9285619.chunk.js.map",
     "runtime-main.js": "/amahack-web/static/js/runtime-main.46077d2e.js",
     "runtime-main.js.map": "/amahack-web/static/js/runtime-main.46077d2e.js.map",
     "static/js/2.a263157f.chunk.js": "/amahack-web/static/js/2.a263157f.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.46077d2e.js",
     "static/js/2.a263157f.chunk.js",
     "static/css/main.8bcbd900.chunk.css",
-    "static/js/main.361b7adf.chunk.js"
+    "static/js/main.c9285619.chunk.js"
   ]
 }
