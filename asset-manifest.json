@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/amahack-web/static/css/main.8bcbd900.chunk.css",
+    "main.js": "/amahack-web/static/js/main.4104b862.chunk.js",
+    "main.js.map": "/amahack-web/static/js/main.4104b862.chunk.js.map",
+    "runtime-main.js": "/amahack-web/static/js/runtime-main.46077d2e.js",
+    "runtime-main.js.map": "/amahack-web/static/js/runtime-main.46077d2e.js.map",
+    "static/js/2.a263157f.chunk.js": "/amahack-web/static/js/2.a263157f.chunk.js",
+    "static/js/2.a263157f.chunk.js.map": "/amahack-web/static/js/2.a263157f.chunk.js.map",
+    "static/js/3.afcdb4a1.chunk.js": "/amahack-web/static/js/3.afcdb4a1.chunk.js",
+    "static/js/3.afcdb4a1.chunk.js.map": "/amahack-web/static/js/3.afcdb4a1.chunk.js.map",
+    "index.html": "/amahack-web/index.html",
+    "static/css/main.8bcbd900.chunk.css.map": "/amahack-web/static/css/main.8bcbd900.chunk.css.map",
+    "static/js/2.a263157f.chunk.js.LICENSE.txt": "/amahack-web/static/js/2.a263157f.chunk.js.LICENSE.txt",
+    "static/media/amazhack.eee8bf89.svg": "/amahack-web/static/media/amazhack.eee8bf89.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.46077d2e.js",
+    "static/js/2.a263157f.chunk.js",
+    "static/css/main.8bcbd900.chunk.css",
+    "static/js/main.4104b862.chunk.js"
+  ]
+}
