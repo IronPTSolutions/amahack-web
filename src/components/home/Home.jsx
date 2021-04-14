@@ -8,10 +8,11 @@ const Home = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    getProducts().then((prods) => {
+    getProducts(category).then((prods) => {
       setProducts(prods);
     });
-  }, []);
+  }, [category]);
+
   return (
     <div className="Home d-flex">
       <SideMenu activeCategory={category} setCategory={setCategory} />
